@@ -332,7 +332,13 @@
         <?php  if ( in_array("banners", $menu) ) {?>
         <li class="header">HOME</li> 
         <?php }?>
-        
+        <?php 
+          if (in_array("search", $menu)) {
+             ?>
+              <li <?php if($module_name == "search"){echo 'class="active"';}?>><a href="<?php echo base_url()."portal/main/page/search"?>"><i class="glyphicon glyphicon-search"></i><span>Search</span></a></li>
+             <?php
+          } 
+        ?>
        
          <?php 
           if (in_array("products", $menu)) {

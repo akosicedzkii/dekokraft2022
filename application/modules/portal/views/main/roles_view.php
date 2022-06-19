@@ -89,6 +89,12 @@
                                         Dashboard
                                         </label>
                                     </div>
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" id="modules" value="search">
+                                        Search
+                                        </label>
+                                    </div>
                                     <b>Home</b>
                                     <div class="checkbox">
                                         <label>
@@ -218,6 +224,7 @@
                             <div class="col-sm-8">
                             <select id="inputDefaultPage">
                                 <option value="dashboard">Dashboard</option>
+                                <option value="search">Search</option>
                                 <option value="products">Product Categories</option>
                                 <option value="product_variants">Product Variants</option>
                                 <option value="invoices">Invoices</option>
