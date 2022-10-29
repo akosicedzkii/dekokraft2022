@@ -12,7 +12,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/dist/css/AdminLTE.min.css">
+<link rel="stylesheet" href="<?php echo base_url();?>/assets/dist/css/AdminLTE.min.css"> 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,6 +52,13 @@
 .bbd{
   border-bottom: 1px dashed !important;
 }
+
+table{
+  font-size:1.45rem !important;
+}
+
+
+
 </style>
 <body onload="window.print();" style="font-size: 1.48rem;line-height: 1;">
 <div class="wrapper">

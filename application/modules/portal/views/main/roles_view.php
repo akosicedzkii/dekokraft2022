@@ -184,6 +184,12 @@
                                         Job Order
                                         </label>
                                     </div>
+                                    <div class="checkbox">
+                                        <label>
+                                        <input type="checkbox" id="modules" value="charge_slip">
+                                        Charge Slip
+                                        </label>
+                                    </div>
                                     <b>System Administrator</b>
                                     <div class="checkbox">
                                         <label>

@@ -444,6 +444,13 @@
              <?php
           } 
         ?>
+         <?php 
+          if (in_array("charge_slip", $menu)) {
+             ?>
+              <li <?php if($module_name == "charge_slip"){echo 'class="active"';}?>><a href="<?php echo base_url()."portal/main/page/charge_slip"?>"><i class="fa fa-bank"></i><span>Charge Slip</span></a></li>
+             <?php
+          } 
+        ?>
         <?php 
           if ( in_array("roles", $menu) ||  in_array("users", $menu) ||  in_array("site_settings", $menu) ||  in_array("logs", $menu) ) {
              ?>

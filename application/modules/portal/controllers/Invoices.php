@@ -112,6 +112,21 @@ class Invoices extends CI_Controller {
         echo $this->invoices_model->get_invoices_roles($this->input->post("term"));
     }
 
+    public function get_invoice_selection()
+    {
+
+        $search = $this->input->get("term[term]");
+        $this->db->like("id",$search);
+        $this->db->where("status",0);
+        $this->db->select("id as text");
+        $this->db->select("id as id");
+        $this->db->limit(10);
+        $filteredValues=$this->db->get("invoices")->result_array();
+
+        echo json_encode(array(
+            'items' => $filteredValues
+        ));
+    }
     public function create_mo()
     {
         echo $this->invoices_model->create_mo($this->input->post("id"));
@@ -138,7 +153,7 @@ class Invoices extends CI_Controller {
     {
         $invoice_id = $this->input->get("invoice_id");
         $invoice_status = $this->db->where("id",$invoice_id)->get("invoices")->row()->status;
-        $this->db->select("product_variants.color,invoice_lines.*,products.description,products.code,products.fob");
+        $this->db->select("products.code,product_variants.location,product_variants.color,invoice_lines.*,products.description,products.code,products.fob");
         $this->db->join("product_variants"," product_variants.id=invoice_lines.product_id");
         $this->db->join("products"," products.id=product_variants.product_id");
         //$this->db->order_by("products.id","asc");
